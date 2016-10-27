@@ -1,0 +1,40 @@
+server = "coinsforall.io";
+port = "6668";
+
+# Your ZCASH payout address
+address = "zthTb2ToG5kuAc11Ni6NxoYjoxQdEr2XvST7XEdLvmHG9k7kotEcwYCaAn1SH4zRdPoXn9kNeFm8CQok9SNtNgn8d9WcdTK";
+
+# You can give this machine a custom name
+# Computer name is used as default
+# name = "worker_name";
+
+# Platform:
+#  "amd": AMD GCN cards
+#  "nvidia": NVidia Maxwell cards
+platform = "amd";
+
+# GPU crash handling (properly untested feature):
+# 0 - do nothing
+# 1 - close miner application
+# 2 - reboot system (need superuser rights)
+onCrash = "0";
+
+# - The following settings have one entry per GPU
+# - If you have more than 4 just add more entries or leave it as is to use defaults
+# - All entries must be separated by commas and set between double quotes
+
+# 0 = don't use device
+# 1 = use device
+devices =        ["1", "1", "1", "1", "1"];
+
+# work sizes
+worksizes = ["256", "256", "256", "256", "256"];
+
+# threads
+threads = ["8192", "8192", "8192", "8192", "8192"];
+
+# -1 means don't change
+corefreq =       ["-1", "-1", "-1", "-1", "-1"];
+memfreq =        ["-1", "-1", "-1", "-1", "-1"];
+powertune =      ["-1", "-1", "-1", "-1", "-1"];
+fanspeed =       ["-1", "-1", "-1", "-1", "-1"];
